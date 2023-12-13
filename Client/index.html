@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CRUD Operations</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    /* Additional styles can be added here if needed */
+    /* For custom styles */
+  </style>
+</head>
+<body>
+  <div class="container mt-5">
+    <h1 class="text-center">Just for Fun</h1>
+    
+    <form id="itemForm" class="mb-3 container mt-5 ">
+      <div class="form-row">
+        <div class="col-md-4 mb-3">
+          <input type="text" class="form-control" id="name" placeholder="Name" required>
+        </div>
+        <div class="col-md-4 mb-3">
+          <input type="text" class="form-control" id="description" placeholder="Description" required>
+        </div>
+        <div class="col-md-2">
+          <button type="submit" class="btn btn-primary">Add Item</button>
+        </div>
+      </div>
+    </form>
+
+    <div class="modal fade" id="editModal" tabindex="-1" role="dialog" aria-labelledby="editModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="editModalLabel">Edit Item</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <form id="editForm">
+              <div class="form-group">
+                <label for="editName">Name</label>
+                <input type="text" class="form-control" id="editName" required>
+              </div>
+              <div class="form-group">
+                <label for="editDescription">Description</label>
+                <input type="text" class="form-control" id="editDescription" required>
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary" id="saveChanges">Save changes</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+    
+    <div id="itemsList" class="row"></div>
+
+  </div>
+
+  <!-- Bootstrap JS and your main.js file -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>
